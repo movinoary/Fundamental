@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator-Logika-di-Non-Boolean</title>
+</head>
+<body>
+    <script>
+        // Operator OR (||)
+        console.info("hello" || "") // Hello
+        console.info("" || []) // []
+        console.info("0" || "NOL") // 0
+        console.info(0 || "NOl" ) // NOL
+        console.info(null || "NULL" ) // NLL
+        console.info(undefined || "UNDEFIEND" ) // UNDEFIEND
+        console.info(0 || false ) // false
+        console.info(false || 0) // 0
+
+        // Contoh pemakaian OR (||)
+        const person ={
+            fristName : "",
+            lastName : "Arystio"
+        };
+
+        const name = person.fristName || person.lastName
+        console.info(name)
+
+        // Perbedaan dengan Nullish
+        const personal ={
+            fristName : null,
+            lastName : "Arystio"
+        };
+
+        const nameal = personal.fristName ?? personal.lastName
+        console.info(nameal)
+
+        // Operator And (&&)
+        console.info("HELLO" && '') // '' 
+        console.info("" && []) // ''
+        console.info("0" && "NOL") // NOL 
+        console.info(0 && "NOL") // 0
+        console.info(null && "NULL") // null 
+        console.info(undefined && "UNDEFIND") // undefind
+        console.info("undefind" && "null") // null
+        console.info("null" && "undefind") // undefin
+
+    </script>
+</body>
+</html>
