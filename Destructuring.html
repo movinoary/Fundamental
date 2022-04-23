@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        {
+        // Biasanya di Array
+        const names = ['mohammad', 'vino', 'arystio'];
+        const fristName = names[0];
+        const middleName = names[1];
+        const lastName = names[2];
+
+        console.info(fristName);
+        console.info(middleName);
+        console.info(lastName);
+
+        // Destructuring Array
+        const name = ['irene', 'seulgi', 'wendy', 'yeri', 'joy'];
+        const [frist, middle, last, ...others] = name;
+
+        console.info(frist);
+        console.info(middle);
+        console.info(last);
+        console.info(others);
+        }
+
+        {
+        const person = {
+            fristName: 'mohammad',
+            lastName:'vino',
+            address: {
+                street: 'jalan buntu 8',
+                city: 'seoul',
+                country: 'south'
+            },
+            hobby: 'nothing',
+            channel: 'ayo ayo lahh'
+        };
+        
+        // Biasa di Object
+        const fristNama = person.fristName;
+        const lastNama = person.lastName;
+
+        // Destructuring Object
+        const { fristName, lastName, address, ...others} = person;
+        console.info(fristName);
+        console.info(lastName);
+        console.info(address);
+        console.info(address.city);
+        console.info(others);
+        console.info(others.channel);
+        }
+
+        {
+            // Destruction FUnction Parameter Object
+            function displayPerson ({fristName, middleName, lastName}){
+                console.info(fristName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+
+            const person = {
+                fristName: 'Mohammad',
+                middleName: 'vino',
+                lastName: 'arystio'
+            }
+
+            displayPerson(person)
+        }
+        {
+            // Destruction FUnction Parameter Object
+            function sum([frist, second]){
+                return frist + second;
+            };
+
+            console.info(sum([1,1]));
+            console.info(sum([10,10]));
+        }
+
+        {
+            //Default Vlaue Array
+            const names = ['mohammad', 'vino'];
+            const [fristNama, middleNama = 'bae', lastNama = 'joo-hyun' ] = names;
+
+            console.info(fristNama);
+            console.info(middleNama);
+            console.info(lastNama);
+        }
+        {
+            //Default Vlaue Object
+            const person = {
+                fristName: 'Mohammad',
+                middleName: 'vino',
+            }
+
+            const { fristName, middleName = 'bae', lastName = 'joo-hyun'} = person;
+            console.info(fristName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        {
+            //Default Vlaue Object
+            const person = {
+                fristName: 'Mohammad',
+                middleName: 'vino',
+            }
+
+            const { 
+                fristName: namaDepan, 
+                middleName: namatengah = 'bae', 
+                lastName:namaBelakang = 'joo-hyun'
+            } = person;
+
+            console.info(namaDepan);
+            console.info(namatengah);
+            console.info(namaBelakang);
+        }
+
+    </script>
+</body>
+</html>

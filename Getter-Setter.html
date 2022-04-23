@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter dan Setter</title>
+</head>
+<body>
+    <script>
+        const person = {
+            fristName : 'Vino',
+            lastName : 'Arystio',
+            fullNAME: function(){
+                return `${this.fristName} ${this.lastName}`;
+            },
+            get fullName() { // Getter
+                return `${this.fristName} ${this.lastName}`;
+            },
+            set fullNama(value){
+                const array = value.split(" ");
+                this.fristName = array [0];
+                this.lastName = array[1];
+            }
+        };
+
+        // Getter
+        // memanggil harus mengunakan kata kunci function
+        console.info(person.fullNAME());
+        // otomatis memanggil get gullname()
+        console.info(person.fullName);
+
+        // Setter
+        person.fullNama = "Bae Jooh-yun";
+        console.table(person);
+        person.fullNama = "Minatozaki Sana";
+        console.table(person);
+        person.fullNama = "Choi Ji-su";
+        console.table(person);
+
+
+    </script>
+</body>
+</html>
