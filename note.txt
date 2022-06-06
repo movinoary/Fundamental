@@ -1,0 +1,6 @@
+ .\node_modules\.bin\eslint --init 
+
+
+ GetStatic / Props Build = Bagus Buat Static di User
+
+ GetServerSideProps Build = Buat data yang ga static
