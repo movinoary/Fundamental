@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner">
+        <img class="layer-1" src="Image/background.png" alt="bc">
+        <img class="layer-2" src="Image/meteor.png" alt="mt">
+        <div class="layer-3">
+            <h1>Hello &amp; Wellcome</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat veritatis quibusdam doloribus magni. Neque iure voluptate incidunt, cupiditate animi maxime delectus tempore dolorum quo quos earum aspernatur eius eos ipsam.</p>
+            <a href="#text">Get Started</a>
+        </div>
+        <img class="layer-4" src="Image/4.png" alt="e">
+        <img class="layer-5" src="Image/5.png" alt="l">
+        <img src="Image/6.png" alt="e">
+    </div>
+    <div class="content" id="text">
+        <h1>Parallax Effect</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam tempore veritatis cupiditate corporis rerum nihil velit assumenda dolorem, quod adipisci vero id accusantium sapiente veniam cum provident molestias, distinctio dolor quos quaerat dicta, sit minima. Ad, inventore maiores sequi, perspiciatis consequuntur id similique aspernatur magnam deserunt deleniti rem culpa dolorum vero autem iste at neque vel doloremque in praesentium! Corrupti labore nemo accusantium, iste, expedita suscipit necessitatibus fugit, quod ducimus laborum dolorem. Cupiditate eveniet vero libero illum praesentium ducimus accusamus quae labore facilis iure! Beatae sit esse sapiente quis at!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus numquam aliquam laudantium unde odit dolor amet facilis hic, perferendis eum molestias tempora beatae maxime libero magnam similique pariatur consequatur. Aperiam et ab labore minus eaque reiciendis similique repellendus distinctio cupiditate voluptatem fuga, amet a quibusdam dolorem illum impedit. Unde eveniet dicta maiores fuga numquam asperiores fugiat a earum minima corrupti illo consequatur et eos quod optio aliquam inventore qui nemo, voluptatum, deserunt accusantium neque soluta. Iusto culpa fugiat quis alias porro harum voluptates dolorem mollitia iste corporis, a eius molestias, dignissimos facere atque sapiente eos dolorum ipsa totam tenetur vero? At non, distinctio, aspernatur nulla rerum pariatur culpa vel natus blanditiis tempora eligendi. Similique at ratione molestias. Pariatur, omnis!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, ex optio delectus rem voluptas architecto perferendis ratione. Excepturi eaque vero, officia amet quos id aliquam possimus quam atque, modi rem. Dolorem delectus, molestias dolorum magnam quos alias doloribus? Eligendi, iusto nostrum cumque magnam, architecto nihil voluptatem incidunt, mollitia rerum voluptatum quas dolore? Dolores, suscipit aspernatur. Laudantium vero expedita temporibus cumque consequatur? Aut blanditiis quaerat distinctio ab? Soluta quod nobis minus, accusamus nemo a, voluptatem obcaecati quos nesciunt doloremque veritatis dolores!</p>
+    </div>
+
+    <script type="text/javascript">
+
+        let layer_1 = document.querySelector('.layer-1');
+        let layer_2 = document.querySelector('.layer-2');
+        let layer_3 = document.querySelector('.layer-3');
+        let layer_4 = document.querySelector('.layer-4');
+        let layer_5 = document.querySelector('.layer-5');
+
+        window.onscroll = function() {
+            let Y = window.scrollY;
+
+            layer_1.style.transform = 'translateY('+ Y/1.5 +'px)'
+            layer_2.style.transform = 'translateY('+ Y/2 +'px)'
+            layer_3.style.transform = 'translateY('+ Y/1.5 +'px)'
+            layer_4.style.transform = 'translateY('+ Y/2 +'px)'
+            layer_5.style.transform = 'translateY('+ Y/3 +'px)'
+        }
+    </script>
+
+</body>
+</html>

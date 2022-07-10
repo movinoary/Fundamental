@@ -11,7 +11,28 @@ body {
   color: #fff;
 }
 
+.navbar {
+  position: fixed;
+  width: 100vw;
+  height: 8vh;
+  background-color: deepskyblue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.nav-text {
+  text-decoration: none;
+  color: darkblue;
+  margin: 0 20px;
+  font-size: 2rem;
+}
+
 .parallax_wrapper {
+  scroll-behavior: smooth;
+  position: relative;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
