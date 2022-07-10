@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 4em;
+  color: #fff;
+}
+
+.parallax_wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
+
+.intro_screen {
+  height: 100vh;
+  background-color: tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outro_screen {
+  height: 100vh;
+  background-color: teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax_group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.parallax_layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#intro {
+  z-index: 0;
+}
+
+#group-1 {
+  z-index: -1;
+}
+
+.base_layer_1 {
+  background-color: crimson;
+  /* Scale calculatin 1 + ((Z transform value * -1) / persective) */
+  transform: translateZ(-300px) scale(2);
+}
+
+.mid_layer_2 {
+  transform: translateZ(0);
+}
+
+.top_layer_2 {
+  transform: translateZ(210px) scale(0.3);
+}
+
+#group-1 {
+}
+
+.mid_layer_2 {
+  background-color: yellowgreen;
+}
+
+#outro {
+}
